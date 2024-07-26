@@ -20,7 +20,7 @@ import com.pdfgenerator.service.PdfConversionService;
 
 @RestController
 @RequestMapping("/api")
-//@CrossOrigin(origins = "http://localhost:4200/")
+@CrossOrigin(origins = "http://localhost:4200/")
 public class UserController {
 
     @Autowired
