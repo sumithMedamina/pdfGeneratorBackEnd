@@ -19,7 +19,7 @@ import com.pdfgenerator.entity.UserDetails;
 @Service
 public class ExcelUpdateService {
 
-    private static final String FILE_LOCATION = "C:\\Users\\msk27\\Downloads\\Excel BI_ETLI_PGI_Plan_without Filter_V1 1.xlsm";
+    private static final String FILE_LOCATION = "C:\\Users\\User\\Downloads\\Excel BI_ETLI_PGI_Plan_without Filter_V1 1.xlsm";
     private static final String SHEET_NAME = "Input";
 
     // Row and column indices for specific fields in the Excel sheet
@@ -77,7 +77,6 @@ public class ExcelUpdateService {
             updateCell(sheet, LIFE_ASSURED_LAST_NAME_ROW, LIFE_ASSURED_LAST_NAME_COL, userDetails.getLifeAssuredLastName());
             
             // Convert LocalDate to Date for DOB
-            
             updateCell(sheet, LIFE_ASSURED_DOB_ROW, LIFE_ASSURED_DOB_COL, userDetails.getLifeAssuredDOB());
             
             updateCell(sheet, PLAN_OPTION_ROW, PLAN_OPTION_COL, userDetails.getPlanOption());
@@ -90,7 +89,7 @@ public class ExcelUpdateService {
             updateCell(sheet, POLICY_TERM_ROW, POLICY_TERM_COL, Integer.parseInt(userDetails.getPolicyTerm()));
             updateCell(sheet, PREMIUM_PAYING_MODE_ROW, PREMIUM_PAYING_MODE_COL, userDetails.getPremiumPayingMode());
 
-            // Convert installment premium to integer
+            // Convert installment premium to integler
             int installmentPremium = Integer.parseInt(userDetails.getInstallmentPremium());
             updateCell(sheet, INSTALLMENT_PREMIUM_ROW, INSTALLMENT_PREMIUM_COL, installmentPremium);
 
